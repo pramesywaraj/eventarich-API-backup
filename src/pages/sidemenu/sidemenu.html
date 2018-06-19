@@ -1,0 +1,19 @@
+<ion-menu [content]="nav" side="left" persistent="true">
+  <ion-header>
+      <ion-toolbar class="lebar-menu"  color="eventarich">
+          <ion-item id="event_title" no-lines>
+              <h1>eventarich</h1>
+          </ion-item>
+      </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-list no-lines>
+          <button id="menu_button" ion-item menuClose *ngFor="let page of pages" (click)="openPage(page)">
+            <ion-icon [name]="page.icon" [color]="isActive(page)"></ion-icon>
+            {{ page.title }}
+          </button>
+      </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #nav swipeBackEnabled="true"></ion-nav>

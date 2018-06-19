@@ -1,0 +1,40 @@
+page-register {
+    .bar-header {
+        border: 0px !important;
+        border-bottom-color: transparent !important;
+        background-image: none !important;
+        border-bottom: none !important;
+    }
+    .toolbar-title.toolbar-title-ios { color: map-get($colors, eventarich); }
+    .my-checkbox {
+        display: flex;
+        align-items: center;
+    }
+
+    ion-item.item-input {
+        padding-left: 0;
+    }
+
+    .passHide_login {
+        font-size: 6vw;
+        margin: 0 auto;
+        margin-top: 25px !important;
+    }
+
+    .buttonReg {
+        position: fixed;
+        bottom: 0px;
+        right: 0px; 
+    }
+    // .text-input::-moz-placeholder {
+    //     color: #FF3080;
+    //   }
+      
+    //   .text-input:-ms-input-placeholder {
+    //     color:#FF3080;
+    //   }
+      
+    //   .text-input::-webkit-input-placeholder {
+    //     color: #FF3080;
+    //   }
+}

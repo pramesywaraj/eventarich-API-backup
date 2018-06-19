@@ -1,0 +1,44 @@
+<ion-header no-border>
+
+  <ion-navbar color="eventarich">
+    <ion-title >Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form (ngSubmit)="doSignup()">
+        <ion-list no-padding>
+            <ion-item>
+                <ion-label color="eventarich" stacked>Email</ion-label>
+                <ion-input class="text-input" [(ngModel)]="email" name="Email" type="email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="eventarich" stacked>Nama Display</ion-label>
+                <ion-input class="text-input" [(ngModel)]="username" name="Username" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="eventarich" stacked>No HP</ion-label>
+                <ion-input class="text-input" [(ngModel)]="phone_number" name="phone" [ngModelOptions]="{standalone: true}" type="number"></ion-input>
+            </ion-item>
+
+                <ion-item>
+                <ion-label color="eventarich" stacked>Alamat</ion-label>
+                <ion-input class="text-input" [(ngModel)]="address" name="Address" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="eventarich" stacked>Password</ion-label>
+                <ion-input  [(ngModel)]="password" name="password" type="{{status}}" #pass="ngModel"  required></ion-input>
+                <button class="passHide_login" [hidden]="look == false" (click)="showPassword()" ion-button clear color="dark" type="button" outline item-end> <ion-icon name="md-eye" class='icon' color="primary2"> </ion-icon> </button>
+                <button class="passHide_login" [hidden]="look == true" (click)="hidePassword()" ion-button clear color="dark" type="button" outline item-end> <ion-icon name="md-eye-off" class='icon' color="primary2"> </ion-icon> </button>
+            </ion-item>
+        </ion-list>
+
+        <button class="buttonReg" ion-button no-margin full color="eventarich" type="submit">Daftar</button>
+    </form>    
+        
+</ion-content>

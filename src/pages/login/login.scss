@@ -1,0 +1,30 @@
+@import "../src/theme/variables";
+
+page-login {
+    .displayed {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form_login {
+        width: 100%;
+        margin: 0 auto;
+        padding: inherit;
+
+        .passHide_login {
+            font-size: 6vw;
+            margin: 0 auto;
+            margin-top: 25px !important;
+        }
+        
+    }
+    .button_login {
+        margin-top: 8vw;
+    }
+
+    #daftar_login {
+        font-weight: 500;
+        color: map-get($colors, eventarich);
+    }
+}
